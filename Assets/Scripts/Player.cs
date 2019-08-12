@@ -11,29 +11,14 @@ public class Player : MonoBehaviour
     [Header("Projectiles")]
     [SerializeField] GameObject projectileParent;
     [SerializeField] GameObject projectilePrefab;
-    [SerializeField] float projectileSpeed = 5f;
 
+    bool leftProjectile;
     bool moveMode = true;
 
     Vector2 currentPosition;
     Vector2 lastPosition = Vector2.zero;
     SpriteRenderer sr;
 
-    //Vector3 lastMousePos;
-
-    //void OnMouseDown()
-    //{
-    //    lastMousePos = Input.mousePosition;
-    //}
-
-    //void OnMouseDrag()
-    //{
-    //    Vector3 delta = Input.mousePosition - lastMousePos;
-    //    Vector3 pos = transform.position;
-    //    pos.x += delta.x * dragSpeed;
-    //    transform.position = pos;
-    //    lastMousePos = Input.mousePosition;
-    //}
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -41,7 +26,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(moveMode);
         if (moveMode)
         {
             Movement();
@@ -99,10 +83,17 @@ public class Player : MonoBehaviour
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    float firingAngle = Mathf.Atan(touchPosition.y / (transform.position.x - touchPosition.x));
+                    float firingAngle = Mathf.Atan((transform.position.x - touchPosition.x) / touchPosition.y) * Mathf.Rad2Deg;
                     GameObject newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0f, 0f, firingAngle)) as GameObject;
                     newProjectile.transform.parent = projectileParent.transform;
-                    newProjectile.transform.Translate(Vector2.up);
+                    if(newProjectile.transform.position.x - transform.position.x > 0)
+                    {
+                        leftProjectile = false;
+                    }
+                    else
+                    {
+                        leftProjectile = true;
+                    }
                     break;
                 case TouchPhase.Ended:
                     moveMode = true;
@@ -123,5 +114,10 @@ public class Player : MonoBehaviour
             Color color = aimingState;
             sr.color = color;
         }
+    }
+
+    public bool GetProjectileDirection()
+    {
+        return leftProjectile;
     }
 }

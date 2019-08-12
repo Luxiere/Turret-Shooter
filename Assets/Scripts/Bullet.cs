@@ -4,51 +4,52 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [Header("Projectile properties")]
+    [SerializeField] float projectileSpeed = 5f;
+    [SerializeField] float projectileDestroyTime = 4f;
+    [Tooltip("In degree")][SerializeField] float directionChange = 90f;
 
-    private Vector2 target;
-    public float speed;
+    [Header("EMP Blast")]
+    [SerializeField] GameObject empBlast;
+    [SerializeField] float explosionTime = 1f;
 
-    public float turnSpeed;
-    Vector3 moveDirection;
+    Rigidbody2D rb;
+    CircleCollider2D explosionRadius;
+    Player player;
 
-    void Start()
+    bool moving = true;
+
+    private IEnumerator Start()
     {
-        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        StartCoroutine(destroyAfterTime());
-        moveDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-        moveDirection.z = 0;
-        moveDirection.Normalize();
+        rb = GetComponent<Rigidbody2D>();
+        explosionRadius = GetComponent<CircleCollider2D>();
+        player = FindObjectOfType<Player>();
+        empBlast.SetActive(false);
+        yield return new WaitForSeconds(projectileDestroyTime - explosionTime);
+        empBlast.SetActive(true);
+        moving = false;
+        //explosion here
+        yield return new WaitForSeconds(explosionTime);
+        Destroy(gameObject);
     }
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, turnSpeed * Time.deltaTime);
-
-        transform.position = transform.position + moveDirection * speed * Time.deltaTime;
-    }
-
-
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Targay")
+        if (moving)
         {
-            Destroy(gameObject);
+            rb.velocity = transform.up * projectileSpeed;
         }
     }
 
-
-    IEnumerator destroyAfterTime()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        yield return new WaitForSeconds(4f);
-        Destroy(gameObject);
+        if (rb.velocity.x > 0 && rb.velocity.y > 0 || rb.velocity.x < 0 && rb.velocity.y < 0)
+        {
+            gameObject.transform.eulerAngles += new Vector3(0f, 0f, directionChange);
+        }
+        else
+        {
+            gameObject.transform.eulerAngles -= new Vector3(0f, 0f, directionChange);
+        }
     }
-
 }

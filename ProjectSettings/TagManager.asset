@@ -14,11 +14,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Blocks
+  - Projectile
+  - Explosion
+  - Borders
   - 
   - 
   - 
