@@ -242,6 +242,8 @@ MonoBehaviour:
   projectileParent: {fileID: 184215248}
   projectilePrefab: {fileID: 4168775739078730987, guid: b95d549c3682c744a8c8cfc2e5b5a8ad,
     type: 3}
+  leftBound: {fileID: 739540436}
+  rightBound: {fileID: 71038319}
 --- !u!212 &202817412
 SpriteRenderer:
   m_ObjectHideFlags: 0
