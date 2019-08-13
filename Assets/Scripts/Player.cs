@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
                         {
                             var movedPosition = currentPosition.x - lastPosition.x;
                             var newPosition = transform.position.x + movedPosition;
-                            var leftPoint = leftBound.transform.TransformPoint(leftBound.offset).x + (sr.size.x / 2f);
-                            var rightPoint = rightBound.transform.TransformPoint(rightBound.offset).x - (sr.size.y / 2f);
+                            var leftPoint = leftBound.transform.TransformPoint(leftBound.offset).x + (leftBound.size.x / 2) + (sr.size.x / 2f);
+                            var rightPoint = rightBound.transform.TransformPoint(rightBound.offset).x - (rightBound.size.x / 2)  - (sr.size.y / 2f);
                             if (leftPoint < newPosition && newPosition < rightPoint)
                                 transform.position = new Vector3(newPosition, 0f);
                         }
