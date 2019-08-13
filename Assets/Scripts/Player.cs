@@ -115,9 +115,4 @@ public class Player : MonoBehaviour
             sr.color = color;
         }
     }
-
-    public bool GetProjectileDirection()
-    {
-        return leftProjectile;
-    }
 }
