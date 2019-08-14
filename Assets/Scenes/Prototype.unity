@@ -344,6 +344,8 @@ MonoBehaviour:
   projectileParent: {fileID: 184215248}
   projectilePrefab: {fileID: 4168775739078730987, guid: b95d549c3682c744a8c8cfc2e5b5a8ad,
     type: 3}
+  leftBound: {fileID: 739540436}
+  rightBound: {fileID: 71038319}
 --- !u!212 &202817412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5554,7 +5556,7 @@ GameObject:
   - component: {fileID: 678459377}
   - component: {fileID: 678459376}
   m_Layer: 5
-  m_Name: Score (1)
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6022,7 +6024,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 12, y: 19}
-  m_SizeDelta: {x: 932.3, y: 191.7}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864735685
 MonoBehaviour:
@@ -6074,8 +6076,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 160
-  m_fontSizeBase: 160
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
