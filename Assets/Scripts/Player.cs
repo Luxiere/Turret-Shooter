@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject projectileParent;
     [SerializeField] GameObject projectilePrefab;
 
+    [Header("Movement")]
+    [SerializeField] BoxCollider2D leftBound;
+    [SerializeField] BoxCollider2D rightBound;
+
     bool leftProjectile;
     bool moveMode = true;
 
@@ -52,7 +56,11 @@ public class Player : MonoBehaviour
                         if (currentPosition != lastPosition)
                         {
                             var movedPosition = currentPosition.x - lastPosition.x;
-                            transform.position += new Vector3(movedPosition, 0f);
+                            var newPosition = transform.position.x + movedPosition;
+                            var leftPoint = leftBound.transform.TransformPoint(leftBound.offset).x + (leftBound.size.x / 2) + (sr.size.x / 2f);
+                            var rightPoint = rightBound.transform.TransformPoint(rightBound.offset).x - (rightBound.size.x / 2)  - (sr.size.y / 2f);
+                            if (leftPoint < newPosition && newPosition < rightPoint)
+                                transform.position = new Vector3(newPosition, 0f);
                         }
                     }
                     lastPosition = currentPosition;
