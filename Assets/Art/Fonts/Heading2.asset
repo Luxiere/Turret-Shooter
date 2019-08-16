@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Heading2
   m_EditorClassIdentifier: 
-  hashCode: 151667801
+  hashCode: 151667802
   material: {fileID: 4842305374684744544}
   materialHashCode: 2570568
   m_Version: 1.1.0
