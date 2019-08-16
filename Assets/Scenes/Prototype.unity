@@ -479,9 +479,10 @@ GameObject:
   - component: {fileID: 202817413}
   - component: {fileID: 202817412}
   - component: {fileID: 202817411}
+  - component: {fileID: 202817414}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,6 +569,21 @@ Transform:
   m_Father: {fileID: 1437460678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202817414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202817410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71be58bb8cfc0bc4691d0b4adb04e632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombTypes:
+  - {fileID: 4168775739078730987, guid: b95d549c3682c744a8c8cfc2e5b5a8ad, type: 3}
+  Ammo: 010000000100000001000000
 --- !u!1 &318540606
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +595,7 @@ GameObject:
   - component: {fileID: 318540608}
   - component: {fileID: 318540607}
   - component: {fileID: 318540609}
+  - component: {fileID: 318540610}
   m_Layer: 9
   m_Name: Blocks_8 (1)
   m_TagString: Targay
