@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Ammunition : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject[] bombTypes;
+    //Each number inside the 'Ammo' array will be an index inside the 'bombTypes' array
+    public int[] Ammo;
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         

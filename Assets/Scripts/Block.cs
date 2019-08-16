@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int points;
+    [HideInInspector] public Manager Current;
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (Current != null)
+            Current.DestroyBlock(points);
     }
 }

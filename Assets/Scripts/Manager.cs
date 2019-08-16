@@ -6,16 +6,46 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     [SerializeField] Level[] levels;
-    private int idx = 0;
+    [SerializeField] Ammunition bombs;
+    private int idx = -1;
+    private int detectedBlocks = 0;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
     }
-    
-    void Update()
+
+    public void DestroyBlock(int points)
     {
-        //SceneManager.LoadScene(idx);
+        levels[idx].points += points;
+        levels[idx].destroyed_block++;
+    }
+
+    private void Update()
+    {
+        if (bombs != null && levels.Length > 0)
+        {
+            if (detectedBlocks == levels[idx].destroyed_block)
+            {
+                //It open the win Window
+            } else if (bombs.Ammo.Length <= 0) {
+                //It open the lose window
+            }
+        }
+    }
+
+    public void Next()
+    {
+        SceneManager.LoadScene(levels[++idx].Name);
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        var blocks = GameObject.FindGameObjectsWithTag("Targay");
+        detectedBlocks = blocks.Length;
+        foreach (GameObject b in blocks)
+            b.GetComponent<Block>().Current = this;
+        bombs = GameObject.FindGameObjectWithTag("Player").GetComponent<Ammunition>();
     }
 
     public int TotalPoints()
@@ -31,6 +61,7 @@ public class Manager : MonoBehaviour
     {
         public string Name;
         [HideInInspector] public int points;
+        [HideInInspector] public int destroyed_block;
     }
 
 }

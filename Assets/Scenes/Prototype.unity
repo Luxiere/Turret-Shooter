@@ -320,9 +320,10 @@ GameObject:
   - component: {fileID: 202817413}
   - component: {fileID: 202817412}
   - component: {fileID: 202817411}
+  - component: {fileID: 202817414}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,6 +410,21 @@ Transform:
   m_Father: {fileID: 1437460678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202817414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202817410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71be58bb8cfc0bc4691d0b4adb04e632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombTypes:
+  - {fileID: 4168775739078730987, guid: b95d549c3682c744a8c8cfc2e5b5a8ad, type: 3}
+  Ammo: 010000000100000001000000
 --- !u!1 &318540606
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +436,7 @@ GameObject:
   - component: {fileID: 318540608}
   - component: {fileID: 318540607}
   - component: {fileID: 318540609}
+  - component: {fileID: 318540610}
   m_Layer: 9
   m_Name: Blocks_8 (1)
   m_TagString: Targay
@@ -517,6 +534,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.54, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &318540610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318540606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 15
+  Current: {fileID: 0}
 --- !u!1 &474169999
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +559,7 @@ GameObject:
   - component: {fileID: 474170001}
   - component: {fileID: 474170000}
   - component: {fileID: 474170002}
+  - component: {fileID: 474170003}
   m_Layer: 9
   m_Name: Blocks_1
   m_TagString: Targay
@@ -625,6 +657,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.41, y: 1.16}
   m_EdgeRadius: 0
+--- !u!114 &474170003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474169999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 10
+  Current: {fileID: 0}
 --- !u!1 &567717698
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +682,7 @@ GameObject:
   - component: {fileID: 567717700}
   - component: {fileID: 567717699}
   - component: {fileID: 567717701}
+  - component: {fileID: 567717702}
   m_Layer: 9
   m_Name: Blocks_1 (1)
   m_TagString: Targay
@@ -733,6 +780,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.41, y: 1.16}
   m_EdgeRadius: 0
+--- !u!114 &567717702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567717698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 10
+  Current: {fileID: 0}
 --- !u!1 &595021838
 GameObject:
   m_ObjectHideFlags: 0
@@ -6121,6 +6182,7 @@ GameObject:
   - component: {fileID: 946196137}
   - component: {fileID: 946196136}
   - component: {fileID: 946196138}
+  - component: {fileID: 946196139}
   m_Layer: 9
   m_Name: Blocks_0
   m_TagString: Targay
@@ -6218,6 +6280,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.74, y: 0.74}
   m_EdgeRadius: 0
+--- !u!114 &946196139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946196135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 5
+  Current: {fileID: 0}
 --- !u!1 &978793859
 GameObject:
   m_ObjectHideFlags: 0
@@ -6407,6 +6483,7 @@ GameObject:
   - component: {fileID: 1188129891}
   - component: {fileID: 1188129890}
   - component: {fileID: 1188129892}
+  - component: {fileID: 1188129893}
   m_Layer: 9
   m_Name: Blocks_8
   m_TagString: Targay
@@ -6504,6 +6581,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.54, y: 2.25}
   m_EdgeRadius: 0
+--- !u!114 &1188129893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188129889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 5
+  Current: {fileID: 0}
 --- !u!1 &1247654968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6515,6 +6606,7 @@ GameObject:
   - component: {fileID: 1247654970}
   - component: {fileID: 1247654969}
   - component: {fileID: 1247654971}
+  - component: {fileID: 1247654972}
   m_Layer: 9
   m_Name: Blocks_7
   m_TagString: Targay
@@ -6612,6 +6704,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 1.15}
   m_EdgeRadius: 0
+--- !u!114 &1247654972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247654968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 10
+  Current: {fileID: 0}
 --- !u!1 &1276785087
 GameObject:
   m_ObjectHideFlags: 0
@@ -7059,52 +7165,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613755151}
   m_CullTransparentMesh: 0
---- !u!1 &1616809184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1616809185}
-  - component: {fileID: 1616809186}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1616809185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616809184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8499999, y: 3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1616809186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616809184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a360a165fecce449fed44bc5e16ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levels:
-  - Name: 
-    points: 0
 --- !u!1 &1695998425
 GameObject:
   m_ObjectHideFlags: 0
@@ -7159,6 +7219,7 @@ GameObject:
   - component: {fileID: 1732268227}
   - component: {fileID: 1732268226}
   - component: {fileID: 1732268228}
+  - component: {fileID: 1732268229}
   m_Layer: 9
   m_Name: Blocks_4
   m_TagString: Targay
@@ -7256,6 +7317,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.39, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &1732268229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732268225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b3464b9cf325c4ba37cbc191e67342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 20
+  Current: {fileID: 0}
 --- !u!1 &1777956578
 GameObject:
   m_ObjectHideFlags: 0
