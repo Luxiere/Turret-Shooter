@@ -8,6 +8,24 @@ TextureImporter:
   - first:
       213: -239365946131200440
     second: ObstacleSprite_1
+  - first:
+      213: -6100502539168827392
+    second: ObstacleSprite_2
+  - first:
+      213: -7796580353578758981
+    second: ObstacleSprite_3
+  - first:
+      213: -4605586118186380355
+    second: ObstacleSprite_4
+  - first:
+      213: 260321864191413627
+    second: ObstacleSprite_5
+  - first:
+      213: -8236373722114074648
+    second: ObstacleSprite_6
+  - first:
+      213: 1021400472221064909
+    second: ObstacleSprite_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -49,14 +67,14 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.50000006, y: 0.45903224}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -131,18 +149,18 @@ TextureImporter:
       name: ObstacleSprite_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 204
-        height: 108
+        x: 34
+        y: 678
+        width: 263
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 9, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38fad7c323272624695e9bf4b3203d8c
+      spriteID: afbd3ef64479ae041a44f72f6ba67de7
       internalID: 5621378756362458916
       vertices: []
       indices: 
@@ -152,10 +170,10 @@ TextureImporter:
       name: ObstacleSprite_1
       rect:
         serializedVersion: 2
-        x: 253
-        y: 0
-        width: 191
-        height: 108
+        x: 348
+        y: 679
+        width: 252
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,17 +181,139 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b407700897127f84bb9e3a96fb519a66
+      spriteID: 228d47116f988e14694f3fc057c02662
       internalID: -239365946131200440
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: -222, y: -54}
-      - {x: -222, y: 54}
-      - {x: -14, y: 53}
-      - {x: -13, y: -54}
+    - serializedVersion: 2
+      name: ObstacleSprite_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 503
+        width: 234
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c75514f30abca47a2aad3cf54595f6
+      internalID: -6100502539168827392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleSprite_3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 509
+        width: 196
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab6ee42b0c430c45aa9473ff1ee7b02
+      internalID: -7796580353578758981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleSprite_4
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 180
+        width: 277
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3868b59fa08ddf41abcb5947f775e99
+      internalID: -4605586118186380355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleSprite_5
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 258
+        width: 123
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaba19d8b0146e74b959ba8948112f34
+      internalID: 260321864191413627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleSprite_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1
+        width: 252
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac409426d2f0b24d838f60256fa353a
+      internalID: -8236373722114074648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObstacleSprite_7
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 0
+        width: 241
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044f4607709887e48a95e64600935d4f
+      internalID: 1021400472221064909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
