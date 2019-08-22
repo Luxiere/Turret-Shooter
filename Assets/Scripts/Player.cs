@@ -1,8 +1,6 @@
 ﻿
 using UnityEngine;
 using System.Collections;
-
-[RequireComponent(typeof(Ammunition))]
 public class Player : MonoBehaviour
 {
     //[SerializeField] float dragSpeed = 1f;
@@ -24,12 +22,10 @@ public class Player : MonoBehaviour
     Vector2 currentPosition;
     Vector2 lastPosition = Vector2.zero;
     SpriteRenderer sr;
-    Ammunition ammo;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        ammo = GetComponent<Ammunition>();
     }
 
     private void Update()

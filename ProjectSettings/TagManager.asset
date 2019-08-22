@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Targay
-  - LoseScreen
-  - WinScreen
   layers:
   - Default
   - TransparentFX
@@ -41,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1208275933
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Particles
+    uniqueID: 2917251533
+    locked: 0
+  - name: Player
+    uniqueID: 403635591
+    locked: 0
+  - name: UI
+    uniqueID: 36485101
     locked: 0
